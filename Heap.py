@@ -18,16 +18,27 @@ class Heap:
         self.up_heap()
         
     def up_heap(self):
-        lastItem = len(self.heap_array) - 1
+        """
+        Gets new items and places them into Heap
+        """
+        newItem = len(self.heap_array) - 1 #gets index of new Item 
               
-        while(self.heap_array[lastItem] < self.heap_array[(lastItem - 1)//2]):
-            parent = ((lastItem - 1)//2)
+        while(self.heap_array[newItem] < self.heap_array[(newItem - 1)//2]):
+            parent = ((newItem - 1)//2)
             
-            temp = self.heap_array[lastItem]
-            self.heap_array[lastItem] = self.heap_array[(lastItem - 1)//2]
-            self.heap_array[(lastItem - 1)//2] = self.heap_array[lastItem]
+            temp = self.heap_array[newItem]
+            self.heap_array[newItem] = self.heap_array[(newItem - 1)//2]
+            self.heap_array[(newItem - 1)//2] = self.heap_array[newItem]
             
-    def 
+            newItem = parent
+            
+    def down_heap(self):
+        """
+        Gets items in the front and swaps them until valid Heap
+        """
+        
+        
+        
     #TODO: Complete implentation
     def extract_min(self):
         if self.is_empty():
